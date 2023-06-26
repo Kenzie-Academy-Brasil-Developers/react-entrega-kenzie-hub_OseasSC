@@ -35,6 +35,7 @@ export const DashBoardProfile = ({}) => {
 
   const handleLogout = () => {
     localStorage.removeItem("userSessionToken");
+    localStorage.removeItem("userID");
     setUserName("");
     setUserModule("");
     setIsLoading(true);

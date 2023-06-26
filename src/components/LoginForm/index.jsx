@@ -32,8 +32,8 @@ export const LoginForm = () => {
         password: userData.password,
       };
       const response = await api.post("/sessions", body);
-      console.log(response.data);
       localStorage.setItem("userSessionToken", response.data.token);
+      localStorage.setItem("userID", response.data.user.id);
       goToDashboard("/dashboard");
     } catch (error) {
       console.log(error);
@@ -41,7 +41,7 @@ export const LoginForm = () => {
   };
 
   const submit = (userData) => {
-    console.log(userLogin(userData));
+    userLogin(userData);
   };
 
   return (

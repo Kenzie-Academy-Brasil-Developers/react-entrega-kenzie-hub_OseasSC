@@ -37,7 +37,7 @@ export const RegisterForm = () => {
   };
 
   const submit = (userData) => {
-    console.log(userRegister(userData));
+    userRegister(userData);
   };
 
   return (
