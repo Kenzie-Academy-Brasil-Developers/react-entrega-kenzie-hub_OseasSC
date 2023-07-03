@@ -48,7 +48,7 @@ export const UserProvider = ({ children }) => {
       };
       await api.post("/users", body);
       console.log("cadastro efetuado");
-      navigate("/success");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
