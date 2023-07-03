@@ -11,6 +11,7 @@ import {
   StyledWorkSectionContainer,
   StyledUl,
   StyledLi,
+  StyledModal,
 } from "./style";
 import { UserContext } from "../../contexts/UserContext";
 import { TechContext } from "../../contexts/TechContext";
@@ -105,15 +106,15 @@ export const DashBoardProfile = ({}) => {
       </StyledWorkSectionContainer>
 
       {isCreateModalOpen && (
-        <div className="modal">
+        <StyledModal className="modal">
           <CreateTechForm closeModal={closeCreateModal} />
-        </div>
+        </StyledModal>
       )}
 
       {isEditModalOpen && (
-        <div className="modal">
+        <StyledModal className="modal">
           <EditTechForm techId={selectedTechId} closeModal={closeEditModal} />
-        </div>
+        </StyledModal>
       )}
 
       <ToastContainer />

@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { TechContext } from "../../contexts/TechContext";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { createTechSchema } from "./createTechSchema";
+import { StyledDivContainer } from "./style";
 
 export const CreateTechForm = ({ closeModal }) => {
   const {
@@ -20,7 +21,7 @@ export const CreateTechForm = ({ closeModal }) => {
   };
 
   return (
-    <>
+    <StyledDivContainer>
       <div>
         <h3>Cadastras Tecnologia</h3>
         <button onClick={closeModal}>X</button>
@@ -39,6 +40,6 @@ export const CreateTechForm = ({ closeModal }) => {
         </select>
         <button type="submit">Criar Tecnologia</button>
       </form>
-    </>
+    </StyledDivContainer>
   );
 };

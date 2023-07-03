@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { editTechSchema } from "./editTechSchema";
+import { StyledDivContainer } from "./style";
 
 export const EditTechForm = ({ techId, closeModal }) => {
   const {
@@ -22,7 +23,7 @@ export const EditTechForm = ({ techId, closeModal }) => {
   };
 
   return (
-    <>
+    <StyledDivContainer>
       <div>
         <h3>Alterar Tecnologia</h3>
         <button onClick={closeModal}>X</button>
@@ -40,6 +41,6 @@ export const EditTechForm = ({ techId, closeModal }) => {
         <button type="submit">Salvar alterações</button>
         <button onClick={() => deleteTech(tech.id)}>Excluir</button>
       </form>
-    </>
+    </StyledDivContainer>
   );
 };
