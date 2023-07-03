@@ -3,6 +3,6 @@ import {
 } from "zod";
 
 export const createTechSchema = z.object({
-    status: z.string().nonempty("O status é obrigatório para criação").email("Selecione um status válido."),
-    title: z.string().nonempty("O titulo é obrigatório para criação").email("Selecione um titulo válido."),
-})
+    status: z.string().min(1, "O status é obrigatório para criação").max(50, "Selecione um status válido."),
+    title: z.string().min(1, "O título é obrigatório para criação").max(50, "Selecione um título válido."),
+});
